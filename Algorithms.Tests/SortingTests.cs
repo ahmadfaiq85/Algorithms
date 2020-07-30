@@ -1,7 +1,5 @@
 using NUnit.Framework;
 
-
-
 namespace Algorithms.Tests
 {
     public class SortingTests
@@ -13,13 +11,25 @@ namespace Algorithms.Tests
         }
 
         [Test]
-        public void IsSorted()
+        public void IsSorted_UsingBubbleSort()
         {
             int[] items = new int[5] { 6, 3, 8, 9, 1 };
-            var sorting = new Algorithms.Sorting();
+            var sorting = new Sorting();
 
             sorting.BubbleSort(items);
             Print(items);
+            CollectionAssert.IsOrdered(items);
+        }
+
+        [Test]
+        public void IsSorted_SelectionSort()
+        {
+            int[] items = new int[6] { 6, 3, -2, 8, 9, 1 };
+            var sorting = new Sorting();
+
+            sorting.SelectionSort(items);
+            Print(items);
+
             CollectionAssert.IsOrdered(items);
         }
 
