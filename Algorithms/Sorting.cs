@@ -24,7 +24,7 @@ namespace Algorithms
 
         public void SelectionSort(int[] array)
         {
-            for (int partIndex = array.Length -1; partIndex > 0; partIndex--)
+            for (int partIndex = array.Length - 1; partIndex > 0; partIndex--)
             {
                 int largestAt = 0;
                 for (int i = 1; i <= partIndex; i++)
@@ -35,7 +35,22 @@ namespace Algorithms
                     }
                     Swap(array, largestAt, partIndex);
                 }
-                
+
+            }
+        }
+
+        public void InsertionSort(int[] array)
+        {
+            for (int partIndex = 1; partIndex < array.Length; partIndex++)
+            {
+                int curUnsorted = array[partIndex];
+                int i = 0;
+                for (i = partIndex; i > 0 && array[i - 1] > curUnsorted; i--)
+                {
+                    array[i] = array[i - 1];
+                }
+
+                array[i] = curUnsorted;
             }
         }
 
