@@ -45,6 +45,18 @@ namespace Algorithms.Tests
             CollectionAssert.IsOrdered(items);
         }
 
+        [Test]
+        public void IsSorted_QuickSort()
+        {
+            int[] items = new int[4] { 6, 8, -2, 3 };
+            var sorting = new Sorting();
+
+            sorting.QuickSort(items);
+            Print(items);
+
+            CollectionAssert.IsOrdered(items);
+        }
+
         private void Print(int[] array)
         {
             TestContext.WriteLine("-----    Test Output    -----");
