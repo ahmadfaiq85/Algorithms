@@ -13,18 +13,18 @@ namespace Algorithms
 
         public static void CreateNodes()
         {
-            Node first = new Node() { Value = 5 };
-            Node second = new Node() { Value = 1 };
+            var first = new Node<int>(5);
+            var second = new Node<int>(1);
 
             first.Next = second;
 
-            Node third = new Node() { Value = 3 };
+            var third = new Node<int>(3);
             second.Next = third;
 
             PrintLinkedList(first);
         }
 
-        private static void PrintLinkedList(Node node)
+        private static void PrintLinkedList(Node<int> node)
         {
             while (node != null)
             {
