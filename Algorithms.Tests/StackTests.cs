@@ -33,7 +33,7 @@ namespace Algorithms.Tests
 
             stack.Pop();
 
-            Assert.AreEqual(1, stack.Peak());
+            Assert.AreEqual(1, stack.Peek());
         }
 
         [Test]
@@ -43,7 +43,7 @@ namespace Algorithms.Tests
             stack.Push(1);
             stack.Push(2);
 
-            int num = stack.Peak();
+            int num = stack.Peek();
 
             Assert.AreEqual(2, num);
         }
@@ -57,7 +57,7 @@ namespace Algorithms.Tests
 
             stack.Pop();
 
-            Assert.AreEqual(1, stack.Peak());
+            Assert.AreEqual(1, stack.Peek());
         }
 
         [Test]

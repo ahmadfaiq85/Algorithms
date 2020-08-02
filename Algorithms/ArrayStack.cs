@@ -19,10 +19,11 @@ namespace Algorithms
             _items = new T[capacity];
         }
 
-        public T Peak()
+        public T Peek()
         {
             return _items[Count - 1];
         }
+
         public void Pop()
         {
             if (IsEmpty)
@@ -58,7 +59,7 @@ namespace Algorithms
 
         IEnumerator IEnumerable.GetEnumerator()
         {
-            throw new NotImplementedException();
+            return GetEnumerator();
         }
     }
 }
