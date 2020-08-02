@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-namespace Algorithms.Tests
+namespace Algorithms
 {
     public class ArrayStack<T> : IEnumerable<T>
     {
