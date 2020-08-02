@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Algorithms.Tests;
+using System;
+using System.Diagnostics;
 
 namespace Algorithms
 {
@@ -8,7 +10,24 @@ namespace Algorithms
         {
             Console.WriteLine("Hello World!");
 
-            CreateNodes();
+            EnumerateStack();
+
+            // CreateNodes();
+        }
+
+        public static void EnumerateStack()
+        {
+            var stack = new ArrayStack<int>();
+
+            stack.Push(3);
+            stack.Push(5);
+            stack.Push(7);
+            stack.Push(9);
+
+            foreach (var item in stack)
+            {
+                Console.WriteLine(item);
+            }
         }
 
         public static void CreateNodes()
